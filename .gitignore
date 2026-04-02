@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/venv/
+backend/.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# Environment
+.env
+.env.local
+
+# Build outputs
+frontend/dist/
+frontend/build/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (local only)
+data/
+uploads/
+exports/
+*.db
+*.db-journal
+
+# Logs
+*.log
+logs/
+
+# Claude
+.claude/
+.serena/
+
+# Playwright
+.playwright-mcp/

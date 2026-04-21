@@ -54,6 +54,7 @@ function App() {
   const menu = user.role === 'admin'
     ? [
         { to: '/standards', label: '标准管理' },
+        { to: '/rules', label: '规则管理' },
         { to: '/model-providers', label: '模型配置' },
         { to: '/tasks', label: '全站任务' },
         { to: '/exports', label: '导出中心' },
@@ -113,7 +114,7 @@ function App() {
             <Route path="/results/:id" element={<ResultPage />} />
             <Route path="/standards" element={<StandardsPage />} />
             <Route path="/model-providers" element={<ModelProvidersPage />} />
-            <Route path="/rules" element={<RulesPage />} />
+            <Route path="/rules" element={user.role === 'admin' ? <RulesPage /> : <Navigate to="/" replace />} />
             <Route path="/tasks" element={<TasksPage />} />
             <Route path="/exports" element={<ExportsPage />} />
           </Routes>
